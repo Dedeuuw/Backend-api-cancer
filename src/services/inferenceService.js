@@ -16,7 +16,7 @@ async function runPrediction(model, image) {
         const result = maxScore > 50 ? 'Cancer' : 'Non-cancer';
         const recommendation = result === 'Cancer' 
             ? 'Segera periksa ke dokter!' 
-            : 'Penyakit kanker tidak terdeteksi';
+            : 'Penyakit kanker tidak terdeteksi.';
 
         return { result, recommendation };
     } catch (error) {
