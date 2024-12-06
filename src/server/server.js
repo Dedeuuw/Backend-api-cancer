@@ -34,7 +34,7 @@ const InputValidationError = require('../exceptions/InputValidationError');
 
         if (response.isBoom) {
             const errorResponse = h.response({
-                status: 'error',
+                status: response.output.statusCode === 413 ? 'fail' : 'error',
                 message: response.message
             });
             errorResponse.code(response.output.statusCode);
