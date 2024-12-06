@@ -1,9 +1,9 @@
 const { Firestore } = require('@google-cloud/firestore');
-const serviceCredentials = require('../config/service-account.json');
+const Credential = require('../config/service-account.json');
 
 const firestoreDB = new Firestore({
     projectId: 'submissionmlgc-muhammadfadhil',
-    credentials: serviceCredentials
+    credentials: Credential
 });
 
 async function fetchAllRecords() {

@@ -3,7 +3,7 @@ const Hapi = require('@hapi/hapi');
 const routes = require('../server/routes');
 const initializeModel = require('../services/loadModel');
 const InputValidationError = require('../exceptions/InputValidationError');
- 
+
 (async () => {
     const server = Hapi.server({
         port: process.env.PORT || 8080,

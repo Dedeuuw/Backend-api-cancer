@@ -7,14 +7,14 @@ async function predictHandler(request, h) {
     const { image } = request.payload;
     const { model } = request.server.app;
 
-    const { result, recommendation } = await runPrediction(model, image);
+    const { result, suggestion } = await runPrediction(model, image);
     const predictionId = crypto.randomUUID();
     const timestamp = new Date().toISOString();
 
     const entry = {
         id: predictionId,
         result,
-        recommendation,
+        suggestion,
         createdAt: timestamp
     };
 
