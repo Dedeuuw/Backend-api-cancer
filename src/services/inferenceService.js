@@ -15,12 +15,12 @@ async function runPrediction(model, image) {
 
         const result = maxScore > 50 ? 'Cancer' : 'Non-cancer';
         const recommendation = result === 'Cancer' 
-            ? 'Consult a doctor immediately.' 
-            : 'No signs of cancer detected.';
+            ? 'Segera periksa ke dokter!' 
+            : 'Penyakit kanker tidak terdeteksi';
 
         return { result, recommendation };
     } catch (error) {
-        throw new InputValidationError('Error occurred during prediction.');
+        throw new InputValidationError('Terjadi kesalahan dalam melakukan prediksi');
     }
 }
 
