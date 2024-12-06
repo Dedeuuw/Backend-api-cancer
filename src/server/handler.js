@@ -22,7 +22,7 @@ async function predictHandler(request, h) {
 
     const response = h.response({
         status: 'success',
-        message: 'Prediction completed successfully',
+        message: 'Model is predicted successfully',
         data: entry
     });
     response.code(201);
